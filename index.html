@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسبيح اونلاين</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            /* يمكنك تغيير الخط هنا */
+            background-color: #b9b8b8;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 36px;
+            /* تكبير عنوان الصفحة */
+            margin-bottom: 20px;
+            /* إضافة مسافة أسفل العنوان */
+        }
+        
+        .prayer-item {
+            background: #d1cece;
+            border-radius: 5px;
+            padding: 15px;
+            /* زيادة المساحة الداخلية */
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            /* تكبير الخط */
+        }
+        
+        .count {
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 24px;
+            /* تكبير الخط */
+        }
+        
+        button {
+            padding: 10px 15px;
+            /* تكبير الزر */
+            border: none;
+            background: #057eff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            /* تكبير الخط */
+        }
+        
+        button:hover {
+            background: #070707;
+        }
+        
+        .verse {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e0f7fa;
+            border-radius: 5px;
+            display: none;
+            /* إخفاء آية الكرسي في البداية */
+            font-size: 20px;
+            /* تكبير الخط */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>موقع تسبيح أونلاين</h1>
+        <div class="prayer-list">
+            <div class="prayer-item">
+                <span>سبحان الله</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>الحمد لله</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>لا إله إلا الله</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>الله أكبر</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>استغفر الله</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <!-- الأذكار الجديدة -->
+            <div class="prayer-item">
+                <span>لا إله إلا الله وحده لا شريك له. له الملك وله الحمد وهو على كل شيء قدير.</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>سبحان الله وبحمده، عدد خلقه ورضا نفسه وزنة عرشه ومداد كلماته.</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>اللهم صل على محمد وعلى آل محمد كما صليت علي ابراهيم وعلي آل ابراهيم وبارك و علي آل محمد كما باركت علي ابراهيم وعلي آل ابراهيم ف العالمين انك حميد مجيد</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <!-- الأدعية الجديدة -->
+            <div class="prayer-item">
+                <span>اللهم اجعلني من الذين يستمعون القول فيتبعون أحسنه.</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+            <div class="prayer-item">
+                <span>اللهم انك عفو كريم تحب العفو فاعف عنا</span>
+                <span class="count">0</span>
+                <button class="increment">تسبيح</button>
+            </div>
+
+            <!-- زر آية الكرسي -->
+            <button id="showVerseButton">عرض آية الكرسي</button>
+            <div class="verse" id="verseContainer">
+                <p>اللَّهُ لا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لا تَأْخُذُهُ سِنَةٌ وَلا نَوْمٌ لَهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلا
+                    يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
+            </div>
+        </div>
+
+        <script>
+            // كود JavaScript
+            const buttons = document.querySelectorAll('.increment');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const countSpan = this.previousElementSibling;
+                    let count = parseInt(countSpan.textContent);
+                    count++;
+                    countSpan.textContent = count;
+                });
+            });
+
+            // إضافة حدث لزر آية الكرسي
+            const showVerseButton = document.getElementById('showVerseButton');
+            const verseContainer = document.getElementById('verseContainer');
+
+            showVerseButton.addEventListener('click', function() {
+                // إظهار أو إخفاء آية الكرسي
+                if (verseContainer.style.display === 'none' || verseContainer.style.display === '') {
+                    verseContainer.style.display = 'block';
+                } else {
+                    verseContainer.style.display = 'none';
+                }
+            });
+        </script>
+</body>
+
+</html>
+
+</html>
